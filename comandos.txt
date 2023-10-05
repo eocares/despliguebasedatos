@@ -1,0 +1,15 @@
+Instalar MYSQL en UBUNTU Server
+sudo apt update
+sudo apt upgrade
+sudo su --- permite ingresar como root
+passwd root ---- cambio de pasword del root
+sudo apt install mysql-server ---- instalar mysql
+mysql_secure_installation ---------------- activar la seguridad de mysql
+sudo mysql -u root
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password by 'nuevo_password';---------- cambio la contraseña del root
+exit
+sudo mysql -u root -p
+create user 'eocares'@'localhost' IDENTIFIED WITH mysql_native_password BY 'nuevopaswword'; -------------- crea un nuevo usuario con su contraseña
+GRANT ALL PRIVILEGES ON *.* TO 'eocares'@'localhost'; ------- se otorga privilegios totales
+flush privileges; ------- activa los previlegios
+exit; ------ se sale del entorno mysql
